@@ -26,6 +26,7 @@ Catatan: Tidak boleh menggunakan crontab.
     - Contoh nama file : makan_sehat1.txt, makan_sehat2.txt, dst
 
 5.  Kerjakan poin a dan b di bawah:
+
 	a. Buatlah program c untuk mencatat log setiap menit dari file log pada syslog ke /home/[user]/log/[dd:MM:yyyy-hh:mm]/log#.log
     Ket:
     - Per 30 menit membuat folder /[dd:MM:yyyy-hh:mm]
