@@ -2,10 +2,38 @@
 
 1.  Elen mempunyai pekerjaan pada studio sebagai fotografer. Suatu hari ada seorang klien yang bernama Kusuma yang meminta untuk mengubah nama file yang memiliki ekstensi .png menjadi “[namafile]_grey.png”. Karena jumlah file yang diberikan Kusuma tidak manusiawi, maka Elen meminta bantuan kalian untuk membuat suatu program C yang dapat mengubah nama secara otomatis dan diletakkan pada direktori /home/[user]/modul2/gambar.
 Catatan : Tidak boleh menggunakan crontab.
+	### Jawaban:
+- Source code: [disini](/soal1/soal1.c)
+- Langkah - langkah:
+	1. Buatlah program C nya
+	2. Lalu compile file C nya dengan mengetikkan `gcc -o ~/soal1/soal1 ~/soal1/soal1.c`
+	3. Setelah itu buat foldernya dengan mengetikkan `mkdir ~/modul2` dan `mkdir ~/modul2/gambar`
+	4. Lalu siapkan file png nya, kalau tidak ada ketik saja `touch ~/ini_gambar.png ~/itu_gambar.png`
+	5. Bila sudah siap, jalankan programnya dengan mengetikkan `~/soal1/soal1`
+	6. Lalu cek di folder ~/modul2/gambar. Dan selamat, file png anda berhasil terpindah.
+	7. Untuk mengecek daemonnya, kita buat lagi file pngnya dengan mengetikkan `touch ~/gambar_lagi.png`
+	8. Lalu cek di folder ~/modul2/gambar. Dan selamat, file gambar_lagi.png anda berhasil terpindah.
 
 2.  Pada suatu hari Kusuma dicampakkan oleh Elen karena Elen dimenangkan oleh orang lain. Semua kenangan tentang Elen berada pada file bernama “elen.ku” pada direktori “hatiku”. Karena sedih berkepanjangan, tugas kalian sebagai teman Kusuma adalah membantunya untuk menghapus semua kenangan tentang Elen dengan membuat program C yang bisa mendeteksi owner dan group dan menghapus file “elen.ku” setiap 3 detik dengan syarat ketika owner dan grupnya menjadi “www-data”. Ternyata kamu memiliki kendala karena permission pada file “elen.ku”. Jadi, ubahlah permissionnya menjadi 777. Setelah kenangan tentang Elen terhapus, maka Kusuma bisa move on.
 Catatan: Tidak boleh menggunakan crontab.
-
+	### Jawaban:
+- Source code: [disini](/soal2/soal2.c)
+- Langkah - langkah:
+	1. Buat program C nya
+	2. Lalu compile file C nya dengan mengetikkan `gcc -o ~/soal2/soal2 ~/soal2/soal2.c`
+	3. Lalu buat folder hatiku/ dengan mengetikkan `mkdir ~/hatiku`
+	4. Setelah itu buat file elen.ku dengan mengetikkan `touch ~/hatiku/elen.ku`
+	5. Lalu cek owner dan groupnya dengan mengetikkan `ls -l ~/hatiku`
+	6. Bila owner dan groupnya bukan www-data ubahlah dengan mengetikkan `sudo chown www-data:www-data ~/hatiku/elen.ku`
+	7. Setelah semuanya siap, jalankan programnya dengan mengetikkan `~/soal2/soal2`
+	8. Lalu cek dengan mengetikkan `ls ~/hatiku`
+	9. Bila tidak ada, selamat file elen.ku telah terhapus
+	10. Untuk mengecek daemon  buat lagi file elen.ku dengan mengetikkan `touch ~/hatiku/elen.ku`
+	11. Lalu cek lagi owner dan groupnya sama seperti langkan 5
+	12. Bila bukan www-data ubah seperti langkah 6
+	13. lalu cek seperti langkah 8
+	14. Bila tidak ada, selamat daemonnya berjalan lancar
+	
 3.  Diberikan file campur2.zip. Di dalam file tersebut terdapat folder “campur2”.  
     Buatlah program C yang dapat :  
     i).  mengekstrak file zip tersebut.  
@@ -15,6 +43,15 @@ Catatan: Tidak boleh menggunakan crontab.
 	- Gunakan minimal 3 proses yang diakhiri dengan exec.
 	- Gunakan pipe
 	- Pastikan file daftar.txt dapat diakses dari text editor
+	### Jawaban:
+- Source code: [disini](/soal3/soal3.c)
+- Langkah - langkah:
+	1. Buat program C nya terlebih dahulu
+	2. Lalu compile file C nya dengan mengetikkan `gcc -o ~/soal3/soal3 ~/soal3/soal3.c`
+	3. Pastikan file campur2.zip sudah ada
+	4. Lalu buat file daftar.txt dengan mengetikkan `touch ~/daftar.txt`
+	5. Jalankan programnya dengan mengetikkan `~/soal3/soal3`
+	6. Setelah itu cek file daftar.txt dengan mengetikkan `cat ~/daftar.txt`, bila ada daftar file .txt nya, selamat program anda berjalan lancar
 
 4.  Dalam direktori /home/[user]/Documents/makanan terdapat file makan_enak.txt yang berisikan daftar makanan terkenal di Surabaya. Elen sedang melakukan diet dan seringkali tergiur untuk membaca isi makan_enak.txt karena ngidam makanan enak. Sebagai teman yang baik, Anda membantu Elen dengan membuat program C yang berjalan setiap 5 detik untuk memeriksa apakah file makan_enak.txt pernah dibuka setidaknya 30 detik yang lalu (rentang 0 - 30 detik).  
     Jika file itu pernah dibuka, program Anda akan membuat 1 file makan_sehat#.txt di direktori /home/[user]/Documents/makanan dengan '#' berisi bilangan bulat dari 1 sampai tak hingga untuk mengingatkan Elen agar berdiet.
