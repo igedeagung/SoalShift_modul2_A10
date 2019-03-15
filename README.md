@@ -61,6 +61,17 @@ Catatan: Tidak boleh menggunakan crontab.
     Catatan:
     - dilarang menggunakan crontab
     - Contoh nama file : makan_sehat1.txt, makan_sehat2.txt, dst
+	###Jawaban:
+- Source code: [disini](/soal4/soal4.c)
+- Langkah - langkah
+	1. Buatlah program C nya terlebih dahulu
+	2. Lalu compile file C nya dengan mengetikkan `gcc -o ~/soal4/soal4 ~/soal4/soal4.c`
+	3. Setelah itu buat folder makanan dengan mengetikkan `mkdir ~/Documents/makanan`
+	4. Pastikan sudah ada file makan_enak.txt didalam file ~/Documents/makanan
+	5. Lalu jalankan programnya dengan mengetikkan `~/soal4/soal4`
+	6. Setelah itu buka file makan_enak.txt
+	7. lalu cek file makan_sehat#.txt dengan mengetikkan `ls ~/Documents/makanan `
+	8. Bila ada, selamat program anda berjalan dengan lancar
 
 5.  Kerjakan poin a dan b di bawah:
 
