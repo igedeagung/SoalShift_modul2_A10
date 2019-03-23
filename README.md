@@ -72,6 +72,10 @@ Catatan: Tidak boleh menggunakan crontab.
 	6. Setelah itu buka file makan_enak.txt
 	7. lalu cek file makan_sehat#.txt dengan mengetikkan `ls ~/Documents/makanan `
 	8. Bila ada, selamat program anda berjalan dengan lancar
+	### Revisi:
+	-------------------
+	Revisi pada saat membuka file makan_enak.txt, karena menggunakan cat dan nano tidak mengubah access time file tersebut, kami tidak kepikiran untuk membukanya di text editor dan text editor bisa mengubah access timenya sehingga program yang kami jalankan lancar.
+	
 
 5.  Kerjakan poin a dan b di bawah:
 
@@ -83,3 +87,7 @@ Catatan: Tidak boleh menggunakan crontab.
 
 	b. Buatlah program c untuk menghentikan program di atas.
     NB: Dilarang menggunakan crontab dan tidak memakai argumen ketika menjalankan program.
+	### Revisi:
+	-------------------------
+	Setelah 30 menit ternyata tidak membuat folder baru dan daemon terhenti, sehingga kami mengubah program C tersebut sampai akhirnya bisa berjalan
+
